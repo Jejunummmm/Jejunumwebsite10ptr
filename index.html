@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jejunum Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jejunum</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservations">Reservations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Jejunum</h2>
+            <p>Experience culinary excellence with our exquisite dishes crafted from the finest ingredients. Join us for an unforgettable dining experience.</p>
+            <div class="carousel">
+                <img src="restaurant1.jpg" alt="Restaurant Interior" class="carousel-image">
+                <img src="restaurant2.jpg" alt="Dining Experience" class="carousel-image" style="display:none;">
+                <img src="restaurant3.jpg" alt="Delicious Food" class="carousel-image" style="display:none;">
+                <button class="carousel-button prev" onclick="prevImage()">&#10094;</button>
+                <button class="carousel-button next" onclick="nextImage()">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div id="menuList"></div>
+        </section>
+
+        <section id="reservations">
+            <h2>Make a Reservation</h2>
+            <form id="reservationForm">
+                <label for="resName">Name:</label>
+                <input type="text" id="resName" required>
+                <label for="resDate">Date:</label>
+                <input type="date" id="resDate" required>
+                <label for="resTime">Time:</label>
+                <input type="time" id="resTime" required>
+                <label for="resGuests">Number of Guests:</label>
+                <input type="number" id="resGuests" min="1" required>
+                <button type="submit">Reserve</button>
+            </form>
+            <div id="reservationMessage"></div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="responseMessage"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Jejunum Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
